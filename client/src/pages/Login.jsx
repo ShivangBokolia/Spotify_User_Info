@@ -4,7 +4,7 @@ const Login = () => {
     const error = new URLSearchParams(window.location.search).get("error");
 
     const login = () => {
-        window.location.href = "http://127.0.0.1:4000/auth/login";
+        window.location.href = "/auth/login";
     };
 
     return (
