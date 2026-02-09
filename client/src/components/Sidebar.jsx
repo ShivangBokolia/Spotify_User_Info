@@ -10,10 +10,12 @@ const Sidebar = ({ me, following, playlists, loading }) => {
                 {!loading && (
                     <div className="w-full flex flex-col items-center gap-16 text-white">
                         <div className="flex flex-col gap-2 items-center">
-                            <img
-                                src={me.images[0].url}
-                                className="rounded-full w-24"
-                            />
+                            {me?.images?.length > 0 && (
+                                <img
+                                    src={me.images[0].url}
+                                    className="rounded-full w-24"
+                                />
+                            )}
                             <h2 className="text-2xl font-bold">
                                 {me.display_name}
                             </h2>
