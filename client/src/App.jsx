@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Landing from "./pages/Landing";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
 import { useEffect } from "react";
 import { useState } from "react";
 import {
