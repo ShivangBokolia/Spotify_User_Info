@@ -7,15 +7,13 @@ const Sidebar = ({ me, following, playlists, loading }) => {
                 {loading && (
                     <div className="text-sm text-gray-500">Loading...</div>
                 )}
-                {!loading && (
+                {!loading && me?.images?.length > 0 && (
                     <div className="w-full flex flex-col items-center gap-16 text-white">
                         <div className="flex flex-col gap-2 items-center">
-                            {me?.images?.length > 0 && (
-                                <img
-                                    src={me.images[0].url}
-                                    className="rounded-full w-24"
-                                />
-                            )}
+                            <img
+                                src={me.images[0].url}
+                                className="rounded-full w-24"
+                            />
                             <h2 className="text-2xl font-bold">
                                 {me.display_name}
                             </h2>
